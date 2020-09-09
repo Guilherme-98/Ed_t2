@@ -58,8 +58,8 @@ bool verificador;
         }
 
         else if(strcmp(operacao, "delf") == 0){
-            fscanf(qry,"%d", &j_num);
-            consulta_delf(listaForma, listaTexto, j_num, svg2, txt);
+            fscanf(qry,"%s", j);
+            consulta_delf(listaForma, listaTexto, j, svg2, txt);
         }
 
         else if(strcmp(operacao, "delf*") == 0){
@@ -106,6 +106,7 @@ bool verificador;
     print(svg2,listaHidrante);
     print(svg2,listaSemaforo);
     print(svg2,listaRadioBase);
+    print(svg2,listaTexto);
 
     rewind(txt_aux);
     while(1){

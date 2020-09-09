@@ -62,7 +62,7 @@ RadioBase radiobase;
 		}
 
 		else if(strcmp(operacao, "t") == 0) {
-			fscanf(geo, "%d %lf %lf %s %s", &id, &x, &y, corBorda, corPreenchimento);
+			fscanf(geo, "%s %lf %lf %s %s", cep, &x, &y, corBorda, corPreenchimento);
 			fgets(conteudo,128,geo);
 			texto = criarTexto(cep, "t", x, y, corBorda, corPreenchimento, conteudo);
 			insert(listaTexto, texto, "t");

@@ -151,16 +151,18 @@ void consulta_pnt(Lista listaForma, Lista listaTexto, char j[], char corBorda[],
         setcorBordaForma(forma, corBorda);
         setcorPreenchimentoForma(forma, corPreenchimento);
     }
-    else if(strcmp(getTipoTexto(texto), "t") == 0){
-        fprintf(txt,"id:%s\n",getIdTexto(texto));
-        fprintf(txt,"tipo:texto\n");
-        fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
-        fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
-        fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
-        fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
-        setcorBordaTexto(texto, corBorda);
-        setcorPreenchimentoTexto(texto, corPreenchimento);
-    } 
+    if(texto != NULL){
+        if(strcmp(getTipoTexto(texto), "t") == 0){
+            fprintf(txt,"id:%s\n",getIdTexto(texto));
+            fprintf(txt,"tipo:texto\n");
+            fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
+            fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
+            fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
+            fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
+            setcorBordaTexto(texto, corBorda);
+            setcorPreenchimentoTexto(texto, corPreenchimento);
+        } 
+    }
 }
 
 void consulta_pnt_2(Lista listaForma, Lista listaTexto,  int j_num, int k_num, char corBorda[32], char corPreenchimento[32], FILE *svg2, FILE *txt){
@@ -204,24 +206,24 @@ char j[32], k[32];
             setcorBordaForma(forma, corBorda);
             setcorPreenchimentoForma(forma, corPreenchimento);
         }
-        else if(strcmp(getTipoTexto(texto), "t") == 0 ){
-            fprintf(txt,"id:%s\n",getIdTexto(texto));
-            fprintf(txt,"tipo:texto\n");
-            fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
-            fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
-            fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
-            fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
-            setcorBordaTexto(texto, corBorda);
-            setcorPreenchimentoTexto(texto, corPreenchimento);
+        if(texto != NULL){
+            if(strcmp(getTipoTexto(texto), "t") == 0 ){
+                fprintf(txt,"id:%s\n",getIdTexto(texto));
+                fprintf(txt,"tipo:texto\n");
+                fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
+                fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
+                fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
+                fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
+                setcorBordaTexto(texto, corBorda);
+                setcorPreenchimentoTexto(texto, corPreenchimento);
+            }
         }  
     }
 }
 
-void consulta_delf(Lista listaForma, Lista listaTexto, int j_num, FILE *svg2, FILE *txt){
-char j[32];
-sprintf(j, "%d", j_num);
-Forma forma = get(listaForma, j);
-Texto texto = get(listaTexto, j);
+void consulta_delf(Lista listaForma, Lista listaTexto, char j[], FILE *svg2, FILE *txt){
+    Forma forma = get(listaForma, j);
+    Texto texto = get(listaTexto, j);
 
     fprintf(txt,"delf j:%s\n",j);
 
@@ -234,7 +236,6 @@ Texto texto = get(listaTexto, j);
             fprintf(txt,"cor borda:%s\n",getcorBordaForma(forma));
             fprintf(txt,"cor preenchimento:%s\n\n",getcorPreenchimentoForma(forma));
         }
-
         else if(strcmp(getTipoForma(forma), "r") == 0 ){
             fprintf(txt,"id:%s\n",getIdForma(forma));
             fprintf(txt,"tipo:retangulo\n");
@@ -246,15 +247,18 @@ Texto texto = get(listaTexto, j);
         }  
         remover(listaForma, j);
     }
-    else if(strcmp(getTipoTexto(texto), "t") == 0 ){
+    if(texto != NULL){  
+        if(strcmp(getTipoTexto(texto), "t") == 0){
         fprintf(txt,"id:%s\n",getIdTexto(texto));
         fprintf(txt,"tipo:texto\n");
         fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
         fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
         fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
         fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
-    }  
-    remover(listaTexto, j);
+        remover(listaTexto, j);
+        }
+    } 
+    
 }
 
 void consulta_delf_2 (Lista listaForma, Lista listaTexto, int j_num, int k_num, FILE *svg2, FILE *txt){
@@ -280,6 +284,7 @@ char j[32];
                 fprintf(txt,"id:%s\n",getIdForma(forma));
                 fprintf(txt,"tipo:circulo\n");
                 fprintf(txt,"raio:%lf\n",getRaioForma(forma));
+
                 fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXForma(forma),getYForma(forma));
                 fprintf(txt,"cor borda:%s\n",getcorBordaForma(forma));
                 fprintf(txt,"cor preenchimento:%s\n\n",getcorPreenchimentoForma(forma));
@@ -295,15 +300,17 @@ char j[32];
             }  
             remover(listaForma, j);
         }
-        else if(strcmp(getTipoTexto(texto), "t") == 0 ){
-            fprintf(txt,"id:%s\n",getIdTexto(texto));
-            fprintf(txt,"tipo:texto\n");
-            fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
-            fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
-            fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
-            fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
+        if(texto != NULL){
+            if(strcmp(getTipoTexto(texto), "t") == 0 ){
+                fprintf(txt,"id:%s\n",getIdTexto(texto));
+                fprintf(txt,"tipo:texto\n");
+                fprintf(txt,"(X,Y) = (%lf,%lf)\n",getXTexto(texto),getYTexto(texto));
+                fprintf(txt,"cor borda:%s\n",getcorBordaTexto(texto));
+                fprintf(txt,"cor preenchimento:%s\n",getcorPreenchimentoTexto(texto));
+                fprintf(txt,"conteudo:%s\n", getConteudoTexto(texto));
+            }
+            remover(listaTexto, j);
         }
-        remover(listaTexto, j);
     }
 }
 
@@ -324,9 +331,16 @@ void consulta_dq(Lista listaForma,Lista listaQuadra, Lista listaHidrante, Lista 
     }
     elemento = encontrarElementoListas(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
     tipo_elemento = encontrarTipo(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
-    fprintf(txt, "\ndq: %s %s %lf\n", aux, id, raio);
+    if(strcmp(aux,"#") == 0){
+        fprintf(txt, "dq: # cep:%s raio:%lf\n",id, raio);
+    }
+    else{
+        fprintf(txt, "dq: cep:%s raio:%lf\n",id, raio);
+    }
+    
     Dq_percorrer(listaQuadra, elemento, raio, tipo_elemento, txt, svg2, verificador);
     anelGrosso(svg2, elemento, tipo_elemento);
+    fprintf(txt,"\n\n");
 }
 
 void consulta_del(FILE* aux, Lista listaQuadra, Lista listaHidrante, Lista listaSemaforo, Lista listaRadioBase, char id[], FILE *svg2, FILE *txt){
@@ -336,6 +350,7 @@ void consulta_del(FILE* aux, Lista listaQuadra, Lista listaHidrante, Lista lista
 
     elemento = encontrarElementoListas(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
     tipo = encontrarTipo(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
+    fprintf(txt,"del: cep|id:%s\n",id);
     if(elemento != NULL){
         if (strcmp(tipo, "q") == 0){
             x = getXQuadra(elemento) + getWQuadra(elemento)/2;
@@ -396,6 +411,7 @@ void consulta_crd(Lista listaQuadra, Lista listaHidrante, Lista listaSemaforo, L
 
     e = encontrarElementoListas(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
     tipo = encontrarTipo(id, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase);
+    fprintf(txt,"crd: cep|id:%s\n",id);
     if(e != NULL){
         if(strcmp(tipo, "q") == 0){
             fprintf(txt, "Coordenadas do equipamento: x:%lf,  y:%lf\n", getXQuadra(e), getYQuadra(e));
@@ -420,7 +436,7 @@ void consulta_crd(Lista listaQuadra, Lista listaHidrante, Lista listaSemaforo, L
 
 void consulta_cbq(Lista listaQuadra, char id[],FILE* svg2, FILE *txt, double x, double y, double r, char corB[]){
 
-    fprintf(txt, "cbq: x:%lf   y:%lf  r:%lf   cor da borda:%s\n", x, y, r, corB);
+    fprintf(txt, "cbq: - x:%lf - y:%lf - r:%lf - cor da borda:%s\n", x, y, r, corB);
     cbqFunction(listaQuadra, txt, svg2, x, y, r, corB);
 }
 
@@ -429,6 +445,7 @@ void consulta_car(FILE* aux, Lista listaQuadra, Lista listaHidrante, Lista lista
     double area = 0;
     char a[32];
     Texto text;
+    fprintf(txt,"car: retangulo: - x:%lf - y:%lf - w:%lf - h:%lf\n",x,y,w,h);
     Forma ret = criarForma("0", "r", x, y, 0, w, h, "black", "none", "1.0");
     area = carFunction(aux, txt, listaQuadra, listaHidrante, listaSemaforo, listaRadioBase, x, y ,h ,w);
     svg_imprimir_forma(aux, ret);

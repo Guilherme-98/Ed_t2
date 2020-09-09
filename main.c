@@ -118,6 +118,7 @@ int i = 1;
     print(svg,listaHidrante);
     print(svg,listaSemaforo);
     print(svg,listaRadioBase);
+    print(svg,listaTexto);
     fprintf(svg, "\n</svg>");
 
     if(entradaQry != NULL){

@@ -40,7 +40,7 @@ void consulta_pnt_2(Lista listaForma, Lista listaTexto, int j_num, int k_num, ch
 *   necessita do comando delf ter sido chamado
 *   nao retorna nada
 */
-void consulta_delf(Lista listaForma, Lista listaTexto, int j_num, FILE *svg2, FILE *txt);
+void consulta_delf(Lista listaForma, Lista listaTexto, char j[], FILE *svg2, FILE *txt);
 
 /*
 *   realiza a operação do delf* do arquivo .qry

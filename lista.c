@@ -189,7 +189,7 @@ double carFunction(FILE* aux, FILE* txt, Lista listaQuadra, Lista listaHidrante,
 		cont = 0; 
 		node = node->proximo;
 	}
-	fprintf(txt, "\nArea total: %lf\n", areaTotal);
+	fprintf(txt, "Area total: %lf\n\n", areaTotal);
 	return areaTotal;
 }
 
