@@ -1,0 +1,103 @@
+TESTES: 11/14   8,0
+
+- b1-carbaixo: area -- calculo incorreto
+- b4-car: area errada
+- cores das quadras estão erradas
+
+INSPECAO DE CODIGO:
+- não implementou o tad lista corretamente:    A  (-0,5)
+     + insert deveria retornar "indicador" do elemento inserido (Posic)
+     + insertAfter|Before deveriam receber como parametro o "indicador"
+     
+##
+## COMPILANDO  AS SUBMISSOES
+##
+
+====> COMPILANDO: gabrielpgs-guilhermehgs
+
+## COMPILANDO SUBMISSAO DO ALUNO: /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src
+   > removendo .o pre-existentes 
+  > compilando
+.[2020-11-03T19:55:28.322161].
+.[2020-11-03T19:55:31.638287].
+##
+## TESTANDO AS SUBMISSOES
+##
+
+====> TESTANDO: gabrielpgs-guilhermehgs
+
+===== EXECUTANDO TESTES: 
+    > dir_tst:/home/evb/Dropbox/ED/CorrTrab/2020/t2/t
+    > dir saida: /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o
+    > prog: /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel
+    > ecpm: False
+    > comVias: False
+    > comBd: False
+   > removendo arquivos  pre-existentes: /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o  *.txt 
+
+   > removendo arquivos  pre-existentes: /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o  *.svg 
+
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b1-bsc-000.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo   
+
+.[2020-11-03T19:55:31.640932].
+   > nomearq: b1-bsc-000 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b1-bsc-000 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/crd-1.qry
+
+.[2020-11-03T19:55:31.655010].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/cbq-2.qry
+
+.[2020-11-03T19:55:31.677666].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/dq-02.qry
+
+.[2020-11-03T19:55:31.752870].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/cbq-1.qry
+
+.[2020-11-03T19:55:31.813988].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/carbaixo.qry
+
+.[2020-11-03T19:55:31.857475].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/dq-01.qry
+
+.[2020-11-03T19:55:31.904583].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b1-bsc-000.geo    -q b1-bsc-000/del.qry
+
+.[2020-11-03T19:55:31.938619].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b2-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b2-bsc-001.geo   
+
+.[2020-11-03T19:55:32.120798].
+   > nomearq: b2-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b2-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b2-bsc-001.geo    -q b2-bsc-001/cbq-1.qry
+
+.[2020-11-03T19:55:32.230000].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b2-bsc-001.geo    -q b2-bsc-001/dq.qry
+
+.[2020-11-03T19:55:32.372393].
+   > arq =  /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b4-bsc-001.geo
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo   
+
+.[2020-11-03T19:55:32.578801].
+   > nomearq: b4-bsc-001 
+
+   dirqry: /home/evb/Dropbox/ED/CorrTrab/2020/t2/t/b4-bsc-001 
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo    -q b4-bsc-001/dq-02.qry
+
+.[2020-11-03T19:55:32.903651].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo    -q b4-bsc-001/cbq-1.qry
+
+.[2020-11-03T19:55:33.782310].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo    -q b4-bsc-001/dq-01.qry
+
+.[2020-11-03T19:55:34.466111].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo    -q b4-bsc-001/del.qry
+
+.[2020-11-03T19:55:35.293110].
+>> /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/src/siguel  -e /home/evb/Dropbox/ED/CorrTrab/2020/t2/t  -o /home/evb/Dropbox/ED/CorrTrab/2020/t2/alunos/gabrielpgs-guilhermehgs/o -f b4-bsc-001.geo    -q b4-bsc-001/car.qry
+
+.[2020-11-03T19:55:36.255384].
+================================
